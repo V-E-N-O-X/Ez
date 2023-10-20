@@ -103,12 +103,12 @@ app.get("/", (req, res) => {
  }, 20000)
           try{
           let data = await fs.readFileSync(__dirname+'/auth_info_baileys/creds.json','utf-8')
-         //  await session.sendMessage(session.user.id, {text: 'Secktor;;;'+btoa(data)});   
+         //  await session.sendMessage(session.user.id, {text: 'Secktor-2.0;;;'+btoa(data)});   
            await delay(800)
           const output = await axios.post('http://paste.c-net.org/',`${btoa(data)}`, {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }});
           let c = output.data.split('/')[3]
-           await session.sendMessage(session.user.id, {text: 'Secktor;;;'+c});	
-          let cc = `*Thanks for choosing Secktor-Md.*\n*Above code is your SESSION-ID*.\n_You completed first step of making Secktor-bot_\n\nVisit secktorbot.me\n*1.Repo:* citel-x.herokuapp.com/repo\n*2.Koyeb:* citel-x.herokuapp.com/koyeb\n*3.Plugins:* citel-x.herokuapp.com/plugins\n*3.Heroku:* citel-x.herokuapp.com/heroku\nThanks`
+           await session.sendMessage(session.user.id, {text: 'Secktor-2.0;;;'+c});	
+          let cc = `*_```Thanks for choosing Secktor-2.0.```_*\n*_```Above code is your SESSION-ID```_*.\n_```You completed first step of making Secktor-2.0```_\n\n```Visit https://github.com/X-S-L-A-S-H-E-R/Secktor-2.0``` \nThanks`
           await session.sendMessage(session.user.id, {text: cc});
           } catch (e) {
             console.log(e)
